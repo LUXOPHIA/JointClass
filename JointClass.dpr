@@ -4,10 +4,11 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   Main in 'Main.pas' {Form1},
-  LIB.House0 in 'LIB.House0.pas',
-  LIB.House2 in 'LIB.House2.pas',
-  LIB.House1 in 'LIB.House1.pas',
-  LIB.House3 in 'LIB.House3.pas';
+  LIB.List0 in 'LIB.List0.pas',
+  LIB.List1 in 'LIB.List1.pas',
+  LIB.List2 in 'LIB.List2.pas',
+  LIB.List3 in 'LIB.List3.pas',
+  LIB in 'LIB.pas';
 
 {$R *.res}
 

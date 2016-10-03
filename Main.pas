@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo,
-  LIB.House0, LIB.House1, LIB.House2, LIB.House3;
+  LIB.List0, LIB.List1, LIB.List2, LIB.List3;
 
 type
   TForm1 = class(TForm)
@@ -17,7 +17,7 @@ type
     { private êÈåæ }
   public
     { public êÈåæ }
-    _House :THouse1<TParen3<Integer,Integer>,TChild3<Integer,Integer>>;
+    _List :TList3;
   end;
 
 var
@@ -29,15 +29,21 @@ implementation //###############################################################
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-     _House := THouse1<TParen3<Integer,Integer>,TChild3<Integer,Integer>>.Create;
+     _List := TList3.Create;
 
-     _House.Paren.Width3 := 1;
-     _House.Child.Value3 := 1;
+     _List.Head.Value := False;
+     _List.Knot.Value := 100;
+     _List.Tail.Value := 0.01;
+
+     TKnot3( _List.Head.Next ).Value := 10;
+     THead3( _List.Knot.Prev ).Value := True;
+     TTail3( _List.Knot.Next ).Value := 0.01;
+     TKnot3( _List.Tail.Prev ).Value := 100;
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
-     _House.Free;
+     _List.Free;
 end;
 
 end. //#########################################################################
